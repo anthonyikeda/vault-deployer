@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Deployment</title>
+</head>
+<body>
+
+<table>
+    <tr>
+        <td><label for="vault_addr">Vault Server</label></td>
+        <td><input type="text" id="vault_addr" name="vault_addr" value="http://192.168.99.100:8200" /></td>
+    </tr>
+    <tr>
+        <td><label for="vault_token">Deployment Token</label></td>
+        <td><input type="password" id="vault_token" name="vault_token" value="asdknasdoknasknald" /></td>
+    </tr>
+    <tr>
+        <td><label for="auth-type">Auth Type</label></td>
+        <td>
+            <select id="auth-type">
+                <option value="token">Token</option>
+                <option value="approle" selected="selected">AppRole</option>
+                <option value="userpass">Username/Password</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td><label for="role">App Role</label></td>
+        <td><input type="text" name="role" placeholder="auth/approle/" id="role"></td>
+    </tr>
+    <tr>
+        <td><label for="getsecret">Get new secret on deploy</label></td>
+        <td>
+            <input type="checkbox" name="getsecret" id="getsecret"/>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
